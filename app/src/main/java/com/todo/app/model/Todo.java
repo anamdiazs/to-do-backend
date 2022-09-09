@@ -1,13 +1,12 @@
 package com.todo.app.model;
 
-import org.springframework.boot.convert.DataSizeUnit;
 import org.springframework.lang.NonNull;
 
 import java.time.LocalDate;
 
-public class CreateTask {
-    private int id;
-    
+public class Todo {
+    private String id;
+
     private String text;
     private LocalDate dueDate;
     private boolean done;
@@ -16,7 +15,7 @@ public class CreateTask {
     private String priority;
     private LocalDate creationDate;
 
-    public CreateTask(int id, String text, LocalDate dueDate, boolean done, String priority, LocalDate creationDate) {
+    public Todo(String id, String text, LocalDate dueDate, boolean done, String priority, LocalDate creationDate) {
         this.id = id;
         this.text = text;
         this.dueDate = dueDate;
@@ -25,7 +24,7 @@ public class CreateTask {
         this.creationDate = creationDate;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -49,7 +48,7 @@ public class CreateTask {
         this.creationDate = creationDate;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
