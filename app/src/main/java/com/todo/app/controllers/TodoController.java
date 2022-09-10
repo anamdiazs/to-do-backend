@@ -43,8 +43,8 @@ public class TodoController {
    }
    @PutMapping("/todos/{id}/done")
    @ResponseStatus(HttpStatus.ACCEPTED)
-   public void completeTask(@RequestBody Todo todo, @PathVariable String id, @PathVariable Boolean done ){
-      todoService.completeTask(id, todo, done);
+   public void completeTask(@RequestBody Todo todo, @PathVariable String id ){
+      todoService.completeTask(id, todo);
    }
 
 

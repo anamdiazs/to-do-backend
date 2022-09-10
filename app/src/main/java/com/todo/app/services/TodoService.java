@@ -26,17 +26,15 @@ public class TodoService {
     public void updateTodo(String id, Todo todo){
         for(int i = 0; i < todos.size(); i++){
             Todo currentTodo = todos.get(i);
-            System.out.println(currentTodo);
             if(currentTodo.getId().equals(id)){
                 todos.set(i, todo);
             }
         }
     }
 
-    public void completeTask(String id, Todo todo, boolean done){
+    public void completeTask(String id, Todo todo){
         for(int i = 0; i < todos.size(); i++){
             Todo currentTodo = todos.get(i);
-            System.out.println(currentTodo);
             if(currentTodo.getId().equals(id)){
                 currentTodo.setDone(true);
             }
