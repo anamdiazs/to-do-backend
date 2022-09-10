@@ -32,4 +32,14 @@ public class TodoService {
             }
         }
     }
+
+    public void completeTask(String id, Todo todo, boolean done){
+        for(int i = 0; i < todos.size(); i++){
+            Todo currentTodo = todos.get(i);
+            System.out.println(currentTodo);
+            if(currentTodo.getId().equals(id)){
+                currentTodo.setDone(true);
+            }
+        }
+    }
 }
